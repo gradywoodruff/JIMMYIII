@@ -31,7 +31,6 @@ html,body{overflow-x:hidden}img,legend{border:0}legend,td,th{padding:0}html{font
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
-    /* Retina-specific stuff here */
 }
 .clearfix:before,
 .clearfix:after,
@@ -94,15 +93,6 @@ html,body{overflow-x:hidden}img,legend{border:0}legend,td,th{padding:0}html{font
   background-color: #000;
   color:#fff;
 }
-
-/*
-.follow-teaser {
-    display:none !important;
-}
-.tmblr-iframe--follow-teaser {
-    display:none !important;   
-}
-*/
 
 * {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
@@ -382,34 +372,6 @@ table {
 @font-face {
     font-family: 'optica-icons';
     src: url(data:application/x-font-woff;charset=utf-8;base64,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) format("woff")
-}
-@font-face {
-    font-family: 'Gibson';
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-Regular-webfont.eot?3");
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-Regular-webfont.eot?3?#iefix") format("embedded-opentype"), url("//assets.tumblr.com/fonts/gibson/Gibson-Regular-webfont.woff?3") format("woff"), url("//assets.tumblr.com/fonts/gibson/Gibson-Regular-webfont.ttf?3") format("truetype"), url("//assets.tumblr.com/fonts/gibson/Gibson-Regular-webfont.svg?3#GibsonRegular") format("svg");
-    font-weight: 400;
-    font-style: normal
-}
-@font-face {
-    font-family: 'Gibson';
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBold-webfont.eot?3");
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBold-webfont.eot?3?#iefix") format("embedded-opentype"), url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBold-webfont.woff?3") format("woff"), url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBold-webfont.ttf?3") format("truetype"), url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBold-webfont.svg?3#GibsonLightBold") format("svg");
-    font-weight: 700;
-    font-style: normal
-}
-@font-face {
-    font-family: 'Gibson';
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-Italic-webfont.eot?3");
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-Italic-webfont.eot?3?#iefix") format("embedded-opentype"), url("//assets.tumblr.com/fonts/gibson/Gibson-Italic-webfont.woff?3") format("woff"), url("//assets.tumblr.com/fonts/gibson/Gibson-Italic-webfont.ttf?3") format("truetype"), url("//assets.tumblr.com/fonts/gibson/Gibson-Italic-webfont.svg?3#GibsonItalic") format("svg");
-    font-weight: 400;
-    font-style: italic
-}
-@font-face {
-    font-family: 'Gibson';
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBoldItalic-webfont.eot?3");
-    src: url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBoldItalic-webfont.eot?3?#iefix") format("embedded-opentype"), url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBoldItalic-webfont.woff?3") format("woff"), url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBoldItalic-webfont.ttf?3") format("truetype"), url("//assets.tumblr.com/fonts/gibson/Gibson-SemiBoldItalic-webfont.svg?3#GibsonLightBoldItalic") format("svg");
-    font-weight: 700;
-    font-style: italic
 }
 .related-posts-wrapper,
 .related-posts-wrapper .related-posts {
@@ -1425,9 +1387,6 @@ body.no-scroll {
 }
 .post-content h1,
 .post-content h2 {
-    font-family: "Gibson", "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
-    font-weight: 400;
-    margin: .75em 0
 }
 .post-content h1.title,
 .post-content h2.title {
@@ -2950,4 +2909,14 @@ figure.photoset {
 .catch-share-events .like_toggle,
 .catch-share-events .reblog_button {
     pointer-events: none
+}
+
+#tumblr_controls, .tmblr-iframe{
+    display:none !important;
+}
+.follow-teaser {
+    display:none !important;
+}
+.tmblr-iframe--follow-teaser {
+    display:none !important;   
 }
