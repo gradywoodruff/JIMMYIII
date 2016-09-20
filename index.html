@@ -36,7 +36,7 @@
         <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
         <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <script src="http://static.tumblr.com/ea85pic/Xstodrobw/custom.js"></script>
+        <script src="http://static.tumblr.com/ea85pic/RAOodrxum/custom.js"></script>
         <script src="http://static.tumblr.com/ea85pic/bxBodrs7p/bootstrap.js"></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -55,145 +55,6 @@
         <![endif]-->
 
         <style>
-            /* dammit tumblr */
-            .tmblr-iframe--controls-phone-container {
-                padding-top:0!important;
-            }
-            body {
-                font-family:g;
-            }
-            h1 {
-                font-size:144px;
-                font-weight:900;
-            }
-            h2 {
-                font-size:90px;
-                font-weight:900;
-            }
-            h3 {
-                margin:0;
-                font-weight:900;
-            }
-            .header-image.cover {
-                background-image: url({HeaderImage});
-            }
-
-            .related-posts-wrapper > h2 {
-                color: {TitleColor};
-            }
-
-            @media screen and (max-device-width: 568px) {
-                .header-image.cover {
-                    background-image: url({HeaderImage-640});
-                    -webkit-background-size: cover;
-                    background-size: cover;
-                }
-
-            }
-
-            /*--------------------------------*/
-            body.loading .intro {
-                display:block
-            }
-            .intro {
-                position:relative;
-                background-color:#A74449;
-                z-index:900;
-                width:100%;
-                width:100vw;
-                height:100%;
-                height:100vh;
-                display:none;
-
-                -webkit-animation: discolights 1.8s linear infinite;
-                        animation: discolights 1.8s linear infinite;
-            }
-            @-webkit-keyframes discolights {
-                0% { background-color: #A74449; }
-                19.999999% { background-color: #A74449; }
-                20% { background-color: #BDB5A8; }
-                39.999999% { background-color: #BDB5A8; }
-                40% { background-color: #40353D; }
-                59.999999% { background-color: #40353D; }
-                60% { background-color: #AA9576; }
-                79.999999% { background-color: #AA9576; }
-                80% { background-color: #685656; }
-                99.999999% { background-color: #685656; }
-                100% { background-color: #A74449; }
-            }
-            @keyframes discolights {
-                0% { background-color: #A74449; }
-                19.999999% { background-color: #A74449; }
-                20% { background-color: #BDB5A8; }
-                39.999999% { background-color: #BDB5A8; }
-                40% { background-color: #40353D; }
-                59.999999% { background-color: #40353D; }
-                60% { background-color: #AA9576; }
-                79.999999% { background-color: #AA9576; }
-                80% { background-color: #685656; }
-                99.999999% { background-color: #685656; }
-                100% { background-color: #A74449; }
-            }
-            body.loading .jimmyiii {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%)
-            }
-            body.loaded .jimmyiii {
-                top: 61px;
-                left: -66px;
-            }
-            .jimmyiii-logo {
-                z-index: 810;
-                font-size: 144px;
-                line-height: 72px;
-                font-weight: 900;
-                height: 30px;
-                color:#000;
-                text-align: center;
-                -webkit-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-            }
-            .jimmyiii-home {
-                font-size: 36px;
-                position: fixed;
-                left: -63px;
-                top: 63px;
-                line-height: 30px;
-                z-index: 630;
-                font-weight: 900;
-                height: 30px;
-                text-align: center;
-                -webkit-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-            }
-            .jimmyiii-home a {
-                text-decoration:none;
-                color: #000;
-            }
-            .jimmyiii-home .close {
-                color: #fff;
-                text-transform: uppercase;
-            }
-            .modal .jimmyiii-home {
-                left: -47px;
-                top: 50px;
-            }
-            .description {
-                font-size:63px;
-                line-height:63px;
-                line-height:63px;
-                text-transform:uppercase;
-                margin:90px;
-                color:rgba(0,0,0,0.45)
-            }
-            
-            /*--------------------------------*/
-
-            /* Custom CSS */
             {CustomCSS}
         </style>
 
@@ -208,8 +69,64 @@
         </div>
         
         <div class="info-modal modal-dialog" role="document">
-        </div><!--info-modal dialog-->
+            <div class="container">
+                <div class="header-wrapper
+                    {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
+                    {block:HideHeaderImage}no-image {/block:HideHeaderImage}
+                    {block:HideAvatar}avatar-hidden{/block:HideAvatar}
+                    {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
 
+                    <header id="header" class="top-blog-header">
+
+                        <div class="blog-title-wrapper content">
+
+                            <div class="title-group{block:IndexPage} animate{/block:IndexPage}">
+
+                                {block:IfShowNavigation}
+                                    <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
+                                        <nav class="nav-menu">
+                                            <ul class="inline-nav">
+                                                {block:HasPages}
+                                                    {block:Pages}
+                                                    <li class="nav-item nav-item--page">
+                                                        <a href="{URL}" class="label">{Label}</a>
+                                                    </li>
+                                                    {/block:Pages}
+                                                {/block:HasPages}
+                                                {block:AskEnabled}
+                                                    <li class="nav-item nav-item--ask">
+                                                        <a href="/ask" class="label">{AskLabel}</a>
+                                                    </li>
+                                                {/block:AskEnabled}
+                                                {block:SubmissionsEnabled}
+                                                    <li class="nav-item nav-item--submit">
+                                                        <a href="/submit" class="label">{SubmitLabel}</a>
+                                                    </li>
+                                                {/block:SubmissionsEnabled}
+                                                {block:Likes}
+                                                    <li class="nav-item nav-item--likes">
+                                                        <a href="/likes" class="label">{lang:Likes}</a>
+                                                    </li>
+                                                {/block:Likes}
+                                                {block:ShareFollowing}
+                                                    <li class="nav-item nav-item--following">
+                                                        <a href="/following" class="label">{lang:Following}</a>
+                                                    </li>
+                                                {/block:ShareFollowing}
+                                                <li class="nav-item nav-item--archive">
+                                                    <a href="/archive" class="label">{lang:Archive}</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                {/block:IfShowNavigation}
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div><!--/container-->
+
+        </div><!--info-modal dialog-->
     </div><!-- /modal -->  
         
     <div class="intro">
@@ -234,60 +151,7 @@
                 </div>
             </div>
 
-            <div class="header-wrapper
-                {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
-                {block:HideHeaderImage}no-image {/block:HideHeaderImage}
-                {block:HideAvatar}avatar-hidden{/block:HideAvatar}
-                {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
-
-                <header id="header" class="top-blog-header">
-
-                    <div class="blog-title-wrapper content">
-
-                        <div class="title-group{block:IndexPage} animate{/block:IndexPage}">
-
-                            {block:IfShowNavigation}
-                                <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
-                                    <nav class="nav-menu">
-                                        <ul class="inline-nav">
-                                            {block:HasPages}
-                                                {block:Pages}
-                                                <li class="nav-item nav-item--page">
-                                                    <a href="{URL}" class="label">{Label}</a>
-                                                </li>
-                                                {/block:Pages}
-                                            {/block:HasPages}
-                                            {block:AskEnabled}
-                                                <li class="nav-item nav-item--ask">
-                                                    <a href="/ask" class="label">{AskLabel}</a>
-                                                </li>
-                                            {/block:AskEnabled}
-                                            {block:SubmissionsEnabled}
-                                                <li class="nav-item nav-item--submit">
-                                                    <a href="/submit" class="label">{SubmitLabel}</a>
-                                                </li>
-                                            {/block:SubmissionsEnabled}
-                                            {block:Likes}
-                                                <li class="nav-item nav-item--likes">
-                                                    <a href="/likes" class="label">{lang:Likes}</a>
-                                                </li>
-                                            {/block:Likes}
-                                            {block:ShareFollowing}
-                                                <li class="nav-item nav-item--following">
-                                                    <a href="/following" class="label">{lang:Following}</a>
-                                                </li>
-                                            {/block:ShareFollowing}
-                                            <li class="nav-item nav-item--archive">
-                                                <a href="/archive" class="label">{lang:Archive}</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            {/block:IfShowNavigation}
-                        </div>
-                    </div>
-                </header>
-            </div>
+            
             {block:SearchPage}
                 {block:NoSearchResults}
                 <div class="search-no-results content">
@@ -533,28 +397,6 @@
 
                                             <section class="post-controls">
                                                 <div class="controls-wrapper">
-                                                    <div class="control share-control">
-                                                        <nav class="pop">
-                                                            <a href="#" class="share selector"></a>
-                                                            <div class="pop-menu share-menu south" id="share_{PostID}">
-                                                                <ul>
-                                                                    <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">{lang:Open in app}</a></li>
-                                                                    <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">{lang:Facebook}</a></li>
-                                                                    <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">{lang:Tweet}</a></li>
-                                                                    {block:Photo}
-                                                                        <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                                                    {/block:Photo}
-                                                                    {block:Video}{block:VideoThumbnail}
-                                                                        <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                                                    {/block:VideoThumbnail}{/block:Video}
-                                                                    <li><a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank">{lang:Reddit}</a></li>
-                                                                    <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">{lang:Mail}</a></li>
-                                                                    <li><a href="{EmbedUrl}" class="share-item permalink">{lang:Embed}</a></li>
-                                                                    <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="arrow"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </nav>
-                                                    </div>
                                                     <div class="control reblog-control">{ReblogButton size="24" color="black"}</div>
                                                     <div class="control like-control">{LikeButton size="24" color="black"}</div>
                                                 </div>
@@ -850,28 +692,6 @@
 
                                                 <section class="post-controls">
                                                     <div class="controls-wrapper">
-                                                        <div class="control share-control">
-                                                            <nav class="pop">
-                                                                <a href="#" class="share selector"></a>
-                                                                <div class="pop-menu share-menu south" id="share_{PostID}">
-                                                                    <ul>
-                                                                        <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">{lang:Open in app}</a></li>
-                                                                        <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">{lang:Facebook}</a></li>
-                                                                        <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">{lang:Tweet}</a></li>
-                                                                        {block:Photo}
-                                                                            <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                                                        {/block:Photo}
-                                                                        {block:Video}{block:VideoThumbnail}
-                                                                            <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">{lang:Pinterest}</a></li>
-                                                                        {/block:VideoThumbnail}{/block:Video}
-                                                                        <li><a href="https://reddit.com/submit?url={URLEncodedPermalink}" class="share-item reddit" target="_blank">{lang:Reddit}</a></li>
-                                                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">{lang:Mail}</a></li>
-                                                                        <li><a href="{EmbedUrl}" class="share-item permalink">{lang:Embed}</a></li>
-                                                                        <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="arrow"></i></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </nav>
-                                                        </div>
                                                         <div class="control reblog-control">{ReblogButton size="24" color="black"}</div>
                                                         <div class="control like-control">{LikeButton size="24" color="black"}</div>
                                                     </div>

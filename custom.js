@@ -10,7 +10,7 @@ $(document).ready(function() {
         $('body').addClass('loaded');
     }, 3600);
   
-    var colors = ['#A74449', '#BDB5A8', '#40353D', '#AA9576', '#685656'];
+    var colors = ['#A74449', '#BDB5A8', '#AA9576', '#685656'];
     $('body').css({'background-color': '' + colors[Math.floor(Math.random() * colors.length)]});
 
 });
