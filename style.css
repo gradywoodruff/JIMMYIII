@@ -82,7 +82,7 @@ html,body{overflow-x:hidden}img,legend{border:0}legend,td,th{padding:0}html{font
 .modal-footer:after {
   clear: both;
 }
-.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}
+.container{padding-right:0;padding-left:15px;margin-right:0;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}
 
 
 ::selection {
@@ -998,6 +998,7 @@ body.no-scroll {
     position: relative
 }
 .post-wrapper {
+    margin-bottom:144px;
 }
 #posts article.visible .post-wrapper {
     overflow: visible
@@ -1091,6 +1092,7 @@ body.no-scroll {
     font-weight: 700
 }
 .post-content p {
+    padding-right:90px;
     margin: 0
 }
 .post-content img+p,
@@ -1120,9 +1122,14 @@ body.no-scroll {
     margin-bottom: 0
 }
 .post-content blockquote {
-    border-left: 3px solid #eee;
-    margin: 1em 0;
-    padding-left: 20px
+    font-size: 90px;
+    line-height: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 90px auto 90px 0;
+    color: #000;
+    text-align: left;
+    max-width: 540px;
 }
 .post-content blockquote:last-child {
     margin-bottom: 0
@@ -1289,13 +1296,12 @@ body.no-scroll {
 .panel,
 .post-footer {
     z-index: 1;
-    height: 50px;
     position: relative;
     width: 100%
 }
 .post-footer {
     clear: both;
-    display: table;
+    margin-top: 18px;
     z-index: 2
 }
 .date-notes {
@@ -1313,22 +1319,16 @@ body.no-scroll {
     margin-top: 1px
 }
 .post-controls {
-    display: table-cell;
-    vertical-align: middle;
-    min-width: 150px;
-    color: #000
 }
 .post-controls .controls-wrapper {
-    text-align: right;
-    margin-right: 20px
+    text-align:left
 }
 .post-controls .control {
     display: inline-block;
     position: relative;
     text-align: left;
     vertical-align: middle;
-    font-size: 24px;
-    margin-left: 4px
+    font-size: 24px
 }
 .post-controls .control .like_button,
 .post-controls .control .reblog_button,
@@ -1493,7 +1493,7 @@ body.no-scroll {
 .inline-meta,
 .post-extra {
     font-size: 18px;
-    text-align:center
+    text-align:left
 }
 .inline-meta .meta-item {
     display: inline-block;
@@ -1511,7 +1511,7 @@ body.no-scroll {
 .post-extra.has-reblog,
 .post-extra.has-source,
 .post-extra.has-tags {
-    margin: 0 20px 5px
+    margin: 0
 }
 .post-extra .tag-link:before {
     content: '#'
@@ -1819,28 +1819,19 @@ body.no-scroll {
 .quote .post-content {
 }
 .quote .post-content blockquote {
-    font-family: Georgia, Times, serif;
-    border: none;
-    font-size: 34px;
-    line-height: 1.3;
-    margin: 0;
-    padding: 0 5px 0 0;
-    quotes: "â€œ" "â€" "â€˜" "â€™";
-    word-break: break-word
 }
-.quote blockquote.medium {
-    font-size: 24px
-}
+.quote blockquote.medium,
 .quote blockquote.long {
-    font-size: 18px
+    font-size: 36px;
+    line-height: 1.6;
 }
 .quote .post-content blockquote:before {
-    content: open-quote;
-    letter-spacing: -.25em
+    display:block;
+    content: open-quote
 }
 .quote .post-content blockquote:after {
-    content: close-quote;
-    margin-left: -.25em
+    display:block;
+    content: close-quote
 }
 .quote .post-content>blockquote p.empty-last-child,
 .quote .post-content>blockquote p:empty+p,
@@ -2441,7 +2432,6 @@ figure.photoset {
         font-size: 25px
     }
     .post-content blockquote {
-        padding-left: 13px
     }
     .post-content menu,
     .post-content ol,
@@ -2777,13 +2767,67 @@ POST TYPES
 .post-content.high-res.with-caption .photo-wrapper {
     width:50%;
     float:right;
-    margin-left: 36px;
+    margin-left: 36px
 }
 .post-content h1.title, .post-content h2.title {
-    font-size: 90px;
+    font-size: 90px
 }
 article.text .post {
-    max-width: 720px;
+    max-width: 720px
+}
+article.text h2.title {
+    font-size:90px;
+    text-transform:uppercase;
+    line-height: 1.6;
+    font-weight:900
+}
+article.text p {
+    margin-top:36px;
+    line-height: 1.6;
+    font-size:18px
+}
+article.text p:first-child {
+    font-size:36px;
+    line-height: 1.6;
+    font-weight:500
+}
+
+body.touch a:hover {
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 767px) {
+    
+    .container {    
+        width:100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .container {    
+        width:810px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .container {    
+        width:1080px;
+    }
+
+}
+
+@media (min-width: 1200px) {
 }
 
 
