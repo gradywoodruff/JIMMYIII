@@ -1126,7 +1126,7 @@ body.no-scroll {
     line-height: 90px;
     font-weight: 900;
     text-transform: uppercase;
-    margin: 90px auto 90px 0;
+    margin: 0;
     color: #000;
     text-align: left;
     max-width: 540px;
@@ -1135,7 +1135,7 @@ body.no-scroll {
     margin-bottom: 0
 }
 .post-content .caption {
-    margin: 20px
+    margin: 20px 0
 }
 .post-content .answerer-answer figure,
 .post-content .asker-question figure,
@@ -1405,17 +1405,19 @@ body.no-scroll {
     font-size: inherit;
     line-height: 1.6
 }
+#footer {
+    margin-left: 0;
+}
 #pagination a {
-    color: #858585;
+    color: #000;
     display: block;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 50px;
     text-align: center;
     text-decoration: none;
-    padding: 10px 28px 10px 18px;
+    padding: 15px 28px 10px 18px;
     position: relative;
-    opacity: .7;
     box-sizing: border-box;
     float: left
 }
@@ -1431,14 +1433,14 @@ body.no-scroll {
     float: right
 }
 #pagination a.next:after {
-    border-left: 7px solid #858585;
+    border-left: 7px solid #000;
     right: 10px
 }
 #pagination a.previous {
-    padding: 10px 18px 10px 28px
+    padding: 15px 18px 10px 28px
 }
 #pagination a.previous:after {
-    border-right: 7px solid #858585;
+    border-right: 7px solid #000;
     left: 10px
 }
 #pagination a:active {
@@ -1446,7 +1448,6 @@ body.no-scroll {
     transform: translateY(1px)
 }
 #pagination .bg {
-    border: 1px solid;
     display: block;
     position: absolute;
     width: 100%;
@@ -1875,6 +1876,8 @@ body.no-scroll {
     display: table;
     text-align: center;
     width: 100%;
+    border: solid 18px #000;
+    border-right: none;
     overflow: hidden
 }
 .photo .photo-wrapper-inner {
@@ -2051,7 +2054,10 @@ figure.photoset {
     background: #111;
     position: relative;
     overflow: hidden;
-    text-align: center
+    text-align: center;
+    border: solid 18px #000;
+    border-right: none;
+    max-height: 100vh
 }
 .video .tumblr_video_container {
     width: auto!important;
@@ -2121,7 +2127,9 @@ figure.photoset {
 .audio_container {
     overflow: hidden;
     position: relative;
-    width: 100%
+    width: 100%;
+    border: solid 18px #000;
+    border-right: none
 }
 .soundcloud_audio_player,
 .spotify_audio_player {
@@ -2337,7 +2345,7 @@ figure.photoset {
     #posts.no-title-desc.avatar-hidden,
     #posts.no-title-desc.avatar-style-hidden,
     .avatar-hidden .description {
-        margin-top: 10px
+        margin-top: 180px
     }
     .avatar-hidden.no-image .blog-title {
         margin-top: 0
@@ -2469,7 +2477,7 @@ figure.photoset {
     }
     .post-extra.has-source,
     .post-extra.has-tags {
-        margin: 15px 15px 0!important
+        margin: 15px 0 0!important
     }
     .permalink .post-extra.has-source,
     .permalink .post-extra.has-tags {
@@ -2500,7 +2508,7 @@ figure.photoset {
         border-top: none
     }
     .date-notes .date-note-wrapper {
-        margin-left: 15px
+        margin-left: 0
     }
     .index-page .meta {
         font-size: 15px
@@ -2663,7 +2671,7 @@ body.loaded .jimmyiii {
 .jimmyiii-logo {
     z-index: 810;
     font-size: 144px;
-    line-height: 72px;
+    line-height: 47px;
     font-weight: 900;
     height: 30px;
     color:rgba(0,0,0,1);
@@ -2791,6 +2799,16 @@ article.text p:first-child {
     line-height: 1.6;
     font-weight:500
 }
+.with-caption p:first-child {
+    font-size:36px;
+    line-height: 1.6;
+    font-weight:500
+}
+.with-caption p {
+    margin-top:36px;
+    line-height: 1.6;
+    font-size:18px
+}
 
 body.touch a:hover {
 }
@@ -2800,14 +2818,50 @@ body.touch a:hover {
 }
 
 @media (max-width: 767px) {
-    
+
+    .with-caption p:first-child {
+        font-size:18px
+    }
     .container {    
-        width:100%;
+        width:100%
+    }
+    .post-content blockquote {
+        font-size: 72px;
+        line-height: 72px;
+        max-width: 100%
+    }
+    article.text h2.title {
+        font-size: 72px;
+        line-height:72px
+    }
+    .post-content.high-res.with-caption .photo, .post-content.high-res.with-caption .photo-wrapper {
+        width: 100%;
+        margin-bottom: 36px
+    }
+    .post-content p {
+        padding-right:45px
     }
 
 }
 
 @media (max-width: 480px) {
+
+    .post-content blockquote {
+        font-size: 45px;
+        line-height: 45px
+    }
+    article.text h2.title {
+        font-size: 45px;
+        line-height:45px
+    }
+    article.text p:first-child {
+        font-size: 30px;
+        line-height:30px
+    }
+    .post-content p {
+        padding-right:18px;
+        margin: 0
+    }
 
 }
 
@@ -2828,8 +2882,10 @@ body.touch a:hover {
 }
 
 @media (min-width: 1200px) {
+
 }
 
+@media (max-height:660px){.jimmyiii-logo{font-size:108px}}@media (max-height:530px){.jimmyiii-logo{font-size:81px}}@media (max-height:410px){.jimmyiii-logo{font-size:63px}}@media (max-height:330px){.jimmyiii-logo{font-size:45px}}@media (max-height:250px){.jimmyiii-logo{font-size:27px}}
 
 #tumblr_controls, .tmblr-iframe{
     display:none !important;
@@ -2839,4 +2895,8 @@ body.touch a:hover {
 }
 .tmblr-iframe--follow-teaser {
     display:none !important;   
+}
+.crt-skin-default .vjs-tech {
+    width:auto!important;
+    height:auto!important;
 }

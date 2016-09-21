@@ -14,13 +14,10 @@
         <meta name="if:Sliding header" content="1">
         <meta name="if:Show navigation" content="1">
         <meta name="if:Endless scrolling" content="1">
-        <meta name="if:Syntax highlighting" content="0">
         <meta name="select:Layout" content="regular" title="Regular">
         <meta name="select:Layout" content="narrow" title="Narrow">
         <meta name="select:Layout" content="grid" title="Grid">
         <meta name="if:Related Posts" content="1">
-        <meta name="text:Disqus shortname" content="">
-        <meta name="text:Google analytics ID" content="">
         {/block:Hidden}
         <style type="text/css">
             @font-face { font-family: g; font-weight: 900; src: url('https://dolphinhood.github.io/a/font/GOTHAM-BLACK.TTF'); }
@@ -39,13 +36,13 @@
         <script src="http://static.tumblr.com/ea85pic/RAOodrxum/custom.js"></script>
         <script src="http://static.tumblr.com/ea85pic/bxBodrs7p/bootstrap.js"></script>
         <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-84374745-1', 'auto');
-          ga('send', 'pageview');
+            ga('create', 'UA-84374745-1', 'auto');
+            ga('send', 'pageview');
 
         </script>
 
@@ -61,85 +58,86 @@
     </head>
     <body data-urlencoded-name="{URLEncodedName}" class="loading">
 
-    <div class="info-modal modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModal">
-        <div class="jimmyiii-home">
-            <div class="close" data-dismiss="modal">
-                close
-            </div>
-        </div>
+        <div class="info-modal modal fade in" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModal">
         
-        <div class="info-modal modal-dialog" role="document">
-            <div class="container">
-                <div class="header-wrapper
-                    {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
-                    {block:HideHeaderImage}no-image {/block:HideHeaderImage}
-                    {block:HideAvatar}avatar-hidden{/block:HideAvatar}
-                    {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
-
-                    <header id="header" class="top-blog-header">
-
-                        <div class="blog-title-wrapper content">
-
-                            <div class="title-group{block:IndexPage} animate{/block:IndexPage}">
-
-                                {block:IfShowNavigation}
-                                    <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
-                                        <nav class="nav-menu">
-                                            <ul class="inline-nav">
-                                                {block:HasPages}
-                                                    {block:Pages}
-                                                    <li class="nav-item nav-item--page">
-                                                        <a href="{URL}" class="label">{Label}</a>
-                                                    </li>
-                                                    {/block:Pages}
-                                                {/block:HasPages}
-                                                {block:AskEnabled}
-                                                    <li class="nav-item nav-item--ask">
-                                                        <a href="/ask" class="label">{AskLabel}</a>
-                                                    </li>
-                                                {/block:AskEnabled}
-                                                {block:SubmissionsEnabled}
-                                                    <li class="nav-item nav-item--submit">
-                                                        <a href="/submit" class="label">{SubmitLabel}</a>
-                                                    </li>
-                                                {/block:SubmissionsEnabled}
-                                                {block:Likes}
-                                                    <li class="nav-item nav-item--likes">
-                                                        <a href="/likes" class="label">{lang:Likes}</a>
-                                                    </li>
-                                                {/block:Likes}
-                                                {block:ShareFollowing}
-                                                    <li class="nav-item nav-item--following">
-                                                        <a href="/following" class="label">{lang:Following}</a>
-                                                    </li>
-                                                {/block:ShareFollowing}
-                                                <li class="nav-item nav-item--archive">
-                                                    <a href="/archive" class="label">{lang:Archive}</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                {/block:IfShowNavigation}
-                            </div>
-                        </div>
-                    </header>
+            <div class="jimmyiii-home">
+                <div class="close" data-dismiss="modal">
+                    close 
                 </div>
-            </div><!--/container-->
+            </div>
+            
+            <div class="info-modal modal-dialog" role="document">
+                <div class="container">
+                    <div class="header-wrapper
+                        {block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}
+                        {block:HideHeaderImage}no-image {/block:HideHeaderImage}
+                        {block:HideAvatar}avatar-hidden{/block:HideAvatar}
+                        {block:ShowAvatar}avatar-style-{AvatarShape}{/block:ShowAvatar}">
 
-        </div><!--info-modal dialog-->
-    </div><!-- /modal -->  
-        
-    <div class="intro">
-        <div class="jimmyiii">
-            <div class="jimmyiii-logo">
-                JIMMYIII
+                        <header id="header" class="top-blog-header">
+
+                            <div class="blog-title-wrapper content">
+
+                                <div class="title-group{block:IndexPage} animate{/block:IndexPage}">
+
+                                    {block:IfShowNavigation}
+                                        <div class="{block:HideTitle}{block:HideDescription}no-title-desc {/block:HideDescription}{/block:HideTitle}nav-wrapper content">
+                                            <nav class="nav-menu">
+                                                <ul class="inline-nav">
+                                                    {block:HasPages}
+                                                        {block:Pages}
+                                                        <li class="nav-item nav-item--page">
+                                                            <a href="{URL}" class="label">{Label}</a>
+                                                        </li>
+                                                        {/block:Pages}
+                                                    {/block:HasPages}
+                                                    {block:AskEnabled}
+                                                        <li class="nav-item nav-item--ask">
+                                                            <a href="/ask" class="label">{AskLabel}</a>
+                                                        </li>
+                                                    {/block:AskEnabled}
+                                                    {block:SubmissionsEnabled}
+                                                        <li class="nav-item nav-item--submit">
+                                                            <a href="/submit" class="label">{SubmitLabel}</a>
+                                                        </li>
+                                                    {/block:SubmissionsEnabled}
+                                                    {block:Likes}
+                                                        <li class="nav-item nav-item--likes">
+                                                            <a href="/likes" class="label">{lang:Likes}</a>
+                                                        </li>
+                                                    {/block:Likes}
+                                                    {block:ShareFollowing}
+                                                        <li class="nav-item nav-item--following">
+                                                            <a href="/following" class="label">{lang:Following}</a>
+                                                        </li>
+                                                    {/block:ShareFollowing}
+                                                    <li class="nav-item nav-item--archive">
+                                                        <a href="/archive" class="label">{lang:Archive}</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    {/block:IfShowNavigation}
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                </div><!--/container-->
+
+            </div><!--info-modal dialog-->
+        </div><!-- /modal -->  
+            
+        <div class="intro">
+            <div class="jimmyiii">
+                <div class="jimmyiii-logo">
+                    JIMMYIII
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="jimmyiii-home">
-        <a data-toggle="modal" data-target="#menuModal">JIMMYIII</a>
-    </div>
+        <div class="jimmyiii-home">
+            <a data-toggle="modal" data-target="#menuModal">JIMMYIII</a>
+        </div>
 
         <section id="page">
             
